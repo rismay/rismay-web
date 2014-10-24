@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  root to: "static_pages#app" # A must for devise.
+
+  get 'app' => "static_pages#app"
+  get 'home' => "static_pages#home"
+
+  devise_for :users, controllers: { registrations: 'users/registrations', passwords: 'users/passwords' }
+
+  resources :users, only: [:show]
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

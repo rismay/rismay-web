@@ -1,0 +1,31 @@
+<div class="row text-center">
+  <div class="col-xs-offset-1 col-xs-10">
+    <svg id="logo"> </svg>
+    <hr/>
+    <h2 id="wrkstrm_header"><b>Rismay</b> <i>noun</i> </h2>
+    <h3 id="wrkstrm_definition_header">
+      A workstream is a set of associated <i>activities</i> <br> focused around a particular <i>aspect</i> of life.
+    </h3>
+  </div>
+  <div class="col-xs-offset-3 col-xs-6">
+    <svg id="force"> </svg>
+    <hr/>
+  </div>
+
+  <div class="col-xs-offset-3 col-xs-6">
+    <h2 id="word_header"> <b> Agendas</b> </h2>
+    <h3 id="definition_header"> wrkstrm keeps track of what you do by categorizing your life into <i>five aspects </i> via agendas.</h3>
+      <%= button_to 'Try it', new_user_registration_url, class: "btn btn-primary btn-lg", method: :get%>
+      <hr/>
+  </div>
+</div>
+
+<script type="application/javascript">
+  $(document).ready( function () {
+    var logo = new RismayLogo.Logo("#logo");
+
+    d3.select(window).on("resize", function () {
+      logo.scale();
+    });
+  });
+</script>

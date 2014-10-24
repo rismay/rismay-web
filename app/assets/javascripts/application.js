@@ -15,6 +15,10 @@
 //= require bootstrap
 //= require underscore
 //= require backbone
+//= require backbone-support
+//= require d3
+//= require color_palette
+//= require wrkstrm_logo
 //= require rismay
 //= require_tree ../templates
 //= require_tree ./models

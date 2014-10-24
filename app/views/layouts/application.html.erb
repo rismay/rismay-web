@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rismay</title>
-  <%= stylesheet_link_tag    'application', media: 'all', '' => true %>
-  <%= javascript_include_tag 'application', '' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "wrkstrm" %></title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render 'layouts/navigation' %>
 
-<%= yield %>
-
+  <div class="container" id="content">
+    <%= render 'layouts/messages' %>
+    <%= yield %>
+  </div>
 </body>
+
+<script type="application/javascript">
+  $(document).ready( function () {
+    var logo = new RismayLogo.Logo("#logo");
+
+    d3.select(window).on("resize", function () {
+      logo.scale();
+    });
+  });
+</script>
+
 </html>

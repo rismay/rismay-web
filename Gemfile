@@ -40,14 +40,17 @@ gem 'spring',        group: :development
 
 
 gem "pry-rails"
+
+gem 'bootstrap-sass'
+
 gem "backbone-on-rails"
 gem "backbone-support"
 gem "rails_12factor", group: :production
 gem "devise"
+
 group :development do
   gem "annotate"
   gem "better_errors"
-  gem "sprockets_better_errors"
   gem "binding_of_caller"
 end
 

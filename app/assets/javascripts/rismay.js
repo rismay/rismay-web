@@ -4,7 +4,6 @@ window.Rismay = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
   }
 };
 
